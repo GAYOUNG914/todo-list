@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+.todo-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 120px auto 0;
+    width: 400px;
+    height: 800px;
+    text-align:center;
+    background: linear-gradient(45deg, Violet, Orange);
+    border-radius: 30px;
+    box-shadow: 5px 3px 3px rgba(0,0,0,0.2);
+}
+
+body{ -ms-overflow-style: none; } 
+::-webkit-scrollbar { display: none; } /*특정 부분 스크롤바 없애기*/ 
+.item-section{ -ms-overflow-style: none; } 
+.item-section::-webkit-scrollbar{ display:none; }
+
+.item-section{
+    overflow-y: auto;
+    margin-top: 20px;
+    width: 100%;
+    height: 80%;
+    padding: 20px;
+}
+
+.itemRow{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 15px;
+    box-shadow: 4px 2px 2px rgba(0,0,0,0.1);
+    .textArea{
+        color: white;
+        font-size: 23px;
+    }
+    button{
+        width: 30px;
+        height: 30px;
+        background: url(./img/trash.png) center center no-repeat;
+        background-size: cover;
+        transition: all 0.3s;
+        &:active{
+            transform: translate(-49%, -49%);
+        }
+        &:hover{
+            transform: scale(1.12);
+        }
+        &:active{
+            transform: scale(1.05);
+        }
+    }
+}
+
+.footer{
+    width: 100%;
+    height: 15%;
+    overflow: hidden;
+    .textArea{
+        width: 100%;
+        height: 20%;
+        input{
+            padding: 0 5px;
+            width: 100%;
+            height: 30px;
+            box-shadow: none;
+            appearance: none;
+            border: none;
+        }
+    }
+    .buttonArea{
+        position: relative;
+        width: 100%;
+        height: 80%;
+        background: rgba(255,255,255,0.4);
+        border-radius: 0 0 30px 30px;
+        button{
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background: url(./img/plus.png) center center no-repeat;
+            background-size: cover;
+            box-shadow: 5px 2px 2px rgba(0,0,0,0.1);
+            transition: all 0.1s;
+            &:active{
+                transform: translate(-49%, -49%);
+                box-shadow: 3px 1px 1px rgba(0,0,0,0.2);
+            }
+        }
+    }
+}
