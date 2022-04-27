@@ -9,7 +9,6 @@ function ItemSection(props){
 
     // console.log(list)
 
-    
 
     const todolistOnebyOne = list.map( i =>{
         // console.log(i)
@@ -17,8 +16,6 @@ function ItemSection(props){
         return <ItemRow list={i} textarea={i.title} key={i.id} removeList={onRemove}></ItemRow>;
     });
     
-
-
 
     return(
         <div className="item-section">

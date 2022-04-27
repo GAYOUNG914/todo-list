@@ -9,6 +9,10 @@ const todolist = []
 
 function TodoListWrap(){
     const [newList, setNewList] = useState(todolist);
+    // const [filter, setFilter] = useState(filterList);
+    // const filterList = setNewList(newList.filter(
+    //     (listId)=>listId.Id !== Id //누른 리스트의 id와, newList 모든 리스트 중 다른 id 값을 가진 객채로만 새로운 배열을 만들어 newList 상태변화시켜주기.
+    //     ));
     
     const data = (item)=>{
         const addData ={
@@ -27,9 +31,8 @@ function TodoListWrap(){
     const removeList = (Id)=>{
         // console.log('눌렀음')
         setNewList(newList.filter(
-            (listId)=>listId.Id !== Id //누른 리스트의 id와, newList 모든 리스트 중 다른 id 값을 가진 객채로만 새로운 배열을 만들어 newList 상태변화시켜주기.
-            ));
-            console.log(Id);
+            (listId)=>listId.id !== Id //누른 리스트의 id와, newList 모든 리스트 중 다른 id 값을 가진 객채로만 새로운 배열을 만들어 newList 상태변화시켜주기.
+        ));
     }
 
 
